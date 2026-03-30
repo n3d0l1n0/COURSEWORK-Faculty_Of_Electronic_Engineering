@@ -1,0 +1,3 @@
+select begin 
+    case nekiId => id2 := 10;
+end

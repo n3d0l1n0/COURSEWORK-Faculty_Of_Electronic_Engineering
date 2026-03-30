@@ -1,0 +1,39 @@
+program
+begin
+    |*
+    komentar komentar komentar    
+    *|
+    a, b, c$1 : integer;
+    r : real;
+    ch : char;
+    flag : boolean;
+
+    a := 10;
+    b := 5;
+    flag := false;
+    ch := 'A';
+
+    select
+    begin
+        case a =>
+            begin
+                b := 1;
+            end
+
+        case (a >= 1 and a <= 10) =>
+            b := 2;
+
+        case (a == 5 or b <> 3) =>
+            begin
+                r := 123.45E-2;
+            end
+
+        case (a < 077) =>
+            c$1 := 0x1A;
+    end
+
+    begin
+        a := 1;
+    end
+end
+.
