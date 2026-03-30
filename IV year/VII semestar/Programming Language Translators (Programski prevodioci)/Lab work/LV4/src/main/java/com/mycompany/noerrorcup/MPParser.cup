@@ -1,0 +1,175 @@
+package com.mycompany.noerrorcup;
+
+import java_cup.runtime.*;
+import java.util.*;
+
+parser code {:
+    public static void main(String[] args) throws Exception {
+        java.io.FileReader file = new java.io.FileReader(args[0]);
+        MPLexer lexer = new MPLexer(file);
+        MPParser parser = new MPParser(lexer);
+        parser.parse();
+    }
+
+    public static class VarInfo {
+        public String type;
+        public boolean initialized;
+        public VarInfo(String t) { type = t; initialized = false; }
+    }
+
+    public static class Scope {
+        public HashMap table = new HashMap();
+        public Scope parent;
+        public Scope(Scope p) { parent = p; }
+        public boolean declare(String id, String type) //2. pravilo
+        { 
+            if (table.containsKey(id)) return false;
+            table.put(id, new VarInfo(type));
+            return true;
+        }
+        public VarInfo lookup(String id) {
+            if (table.containsKey(id)) return (VarInfo)table.get(id);
+            if (parent != null) return parent.lookup(id);
+            return null;
+        }
+    }
+
+    public static Scope currentScope = new Scope(null);
+
+    public static boolean isNumeric(String type) {
+        return type.equals("integer") || type.equals("real") || type.equals("char");
+    }
+
+    public static int getRank(String type) { //hijerarhija
+        if (type.equals("char")) return 1;
+        if (type.equals("integer")) return 2;
+        if (type.equals("real")) return 3;
+        return 0;
+    }
+
+    public static boolean canAssign(String target, String source) { //provera dodele
+        if (target.equals(source)) return true;
+        int tRank = getRank(target);
+        int sRank = getRank(source);
+        return (tRank > 0 && sRank > 0 && tRank >= sRank);
+    }
+
+    public static String typeOfConst(String val) {
+        if (val.equals("true") || val.equals("false")) return "boolean";
+        if (val.startsWith("'")) return "char";
+        if (val.contains(".") || val.toLowerCase().contains("e")) return "real";
+        return "integer";
+    }
+:};
+
+terminal PROGRAM, BEGIN, END;
+terminal INTEGER, CHAR, REAL, BOOLEAN;
+terminal SELECT, CASE, OR, AND;
+terminal String ID, CONST;
+terminal LEFTPAR, RIGHTPAR;
+terminal COLON, COMMA, DOT, SEMICOLON;
+terminal ASSIGN, ARROW;
+terminal LT, LE, EQ, NE, GT, GE;
+
+non terminal Program, Block, Variables, StatementList, Declaration;
+non terminal ArrayList NameList;
+non terminal String Type, Statement, SelectStatement, CaseList, Case;
+non terminal String Expression, AndExpression, RelExpression, Term, RelOp;
+
+precedence left OR;
+precedence left AND;
+precedence nonassoc LT, LE, EQ, NE, GT, GE;
+
+Program ::= PROGRAM Block DOT {: System.out.println("Program parsed."); :};
+
+Block ::= BEGIN Variables StatementList END;
+
+Variables ::= Variables Declaration | ;
+
+Declaration ::= NameList:nl COLON Type:t SEMICOLON
+    {:
+        for(int i=0; i<nl.size(); i++) {
+            String id = (String)nl.get(i);
+            if(!MPParser.currentScope.declare(id, t)) //Pravilo 1.
+            {
+                System.out.println("Sem. greska: '" + id + "' vec deklarisana.");
+            }
+        }
+    :};
+
+NameList ::= NameList:nl COMMA ID:id
+    {: nl.add(id); RESULT = nl; :}
+  | ID:id
+    {: ArrayList tmp = new ArrayList(); tmp.add(id); RESULT = tmp; :};
+
+Type ::= INTEGER {: RESULT = "integer"; :}
+       | REAL    {: RESULT = "real";    :}
+       | CHAR    {: RESULT = "char";    :}
+       | BOOLEAN {: RESULT = "boolean"; :};
+
+StatementList ::= Statement | StatementList Statement;
+
+Statement ::= ID:id ASSIGN Expression:e SEMICOLON
+    {:
+        MPParser.VarInfo v = MPParser.currentScope.lookup(id);
+        if(v == null) {
+            System.out.println("Sem. greska: '" + id + "' nije deklarisana."); //2. pravilo - nedeklarisana prom
+        } else {
+            if(!MPParser.canAssign(v.type, e)) { //5. pravilo (konverzija u nizi tip)
+                System.out.println("Sem. greska: Tip " + e + " se ne moze dodeliti tipu " + v.type + ".");
+            }
+            v.initialized = true;
+        }
+    :}
+  | Block
+  | SelectStatement;
+
+SelectStatement ::= SELECT BEGIN CaseList END;
+
+CaseList ::= CaseList Case | Case;
+
+Case ::= CASE Expression:e ARROW Statement
+    {:
+        if(e != null && !e.equals("boolean")) { //4. pravilo
+            System.out.println("Sem. greska: Case izraz mora biti boolean (detektovano: " + e + ").");
+        }
+    :};
+
+Expression ::= Expression:e1 OR AndExpression:e2
+    {:
+        if(e1.equals("boolean") && e2.equals("boolean")) RESULT = "boolean"; //7. pravilo
+        else { System.out.println("Sem. greska: Logicki OR zahteva boolean."); RESULT = "error"; }
+    :}
+  | AndExpression:ae {: RESULT = ae; :};
+
+AndExpression ::= AndExpression:ae AND RelExpression:re
+    {:
+        if(ae.equals("boolean") && re.equals("boolean")) RESULT = "boolean";
+        else { System.out.println("Sem. greska: Logicki AND zahteva boolean."); RESULT = "error"; }
+    :}
+  | RelExpression:re {: RESULT = re; :};
+
+RelExpression ::= Term:t1 RelOp:op Term:t2 
+    {:
+        if(MPParser.isNumeric(t1) && MPParser.isNumeric(t2)) RESULT = "boolean"; //6. pravilo
+        else { System.out.println("Sem. greska: Relacioni operatori zahtevaju numericke tipove."); RESULT = "error"; }
+    :}
+  | Term:t {: RESULT = t; :};
+
+RelOp ::= LT | LE | EQ | NE | GT | GE;
+
+Term ::= ID:id
+    {:
+        MPParser.VarInfo v = MPParser.currentScope.lookup(id);
+        if(v == null) {
+            System.out.println("Sem. greska: '" + id + "' nije deklarisana.");
+            RESULT = "error";
+        } else if(!v.initialized) {
+            System.out.println("Sem. greska: '" + id + "' nije inicijalizovana."); //3. pravilo
+            RESULT = v.type;
+        } else {
+            RESULT = v.type;
+        }
+    :}
+  | CONST:c {: RESULT = MPParser.typeOfConst(c); :}
+  | LEFTPAR Expression:e RIGHTPAR {: RESULT = e; :};
