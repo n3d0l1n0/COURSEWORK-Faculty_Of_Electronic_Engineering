@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "DS_LV2";
+
+package math;
+
+import "google/protobuf/empty.proto";
+
+message NumberRequest
+{
+    int32 value = 1;
+}
+
+message NumberResponse
+{
+    int32 value = 1;
+}
+
+service MathService
+{
+    rpc UpdateAcc(NumberRequest) returns (google.protobuf.Empty);
+    rpc ProcessStream(stream NumberRequest) returns (stream NumberResponse);
+}

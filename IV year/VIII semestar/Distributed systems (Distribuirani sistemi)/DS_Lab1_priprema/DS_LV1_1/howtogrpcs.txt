@@ -1,0 +1,43 @@
+C:\Users\nstoj>cd Desktop
+
+C:\Users\nstoj\Desktop>mkdir DS_LV1_2
+
+C:\Users\nstoj\Desktop>cd DS_LV1_2
+
+C:\Users\nstoj\Desktop\DS_LV1_2>dotnet new sln -n DS
+The template "Solution File" was created successfully.
+
+
+C:\Users\nstoj\Desktop\DS_LV1_2>dotnet new grpc -n Server
+The template "ASP.NET Core gRPC Service" was created successfully.
+
+Processing post-creation actions...
+Restoring C:\Users\nstoj\Desktop\DS_LV1_2\Server\Server.csproj:
+Restore succeeded.
+
+
+
+C:\Users\nstoj\Desktop\DS_LV1_2>dotnet new console -n Client
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Restoring C:\Users\nstoj\Desktop\DS_LV1_2\Client\Client.csproj:
+Restore succeeded.
+
+
+
+C:\Users\nstoj\Desktop\DS_LV1_2>dotnet sln add Server/Server.csproj
+Project `Server\Server.csproj` added to the solution.
+
+C:\Users\nstoj\Desktop\DS_LV1_2>dotnet sln add Client/Client.csproj
+Project `Client\Client.csproj` added to the solution.
+
+C:\Users\nstoj\Desktop\DS_LV1_2>cd Server
+dotnet add package Grpc.AspNetCore
+dotnet add package Grpc.Tools
+dotnet add package Google.Protobuf
+
+C:\Users\nstoj\Desktop\DS_LV1_2>cd Client
+dotnet add package Grpc.Net.Client
+dotnet add package Grpc.Tools
+dotnet add package Google.Protobuf

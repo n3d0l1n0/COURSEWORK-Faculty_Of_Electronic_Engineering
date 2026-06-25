@@ -1,0 +1,457 @@
+Zadatak:
+Zadatak  Koristeći Apache Lucene biblioteku indeksirati kolekciju tekstualnih fajlova i
+odraditi pretraživanje nad kreiranim indeksom. 
+1. Kreirati Java aplikaciju u sa nazivom <broj_indeksa>_<ime>_<prezime>_lab1
+u Eclipse okruženju i referencirati potrebne JAR fajlove iz Apache Lucene
+biblioteke. 
+2. Pronaći najmanje 4 obična tekstualna fajla veličine od 30KB do 500KB. Fajlove
+je npr. moguće pronaći npr. na sajtu Project Gutenberg (www.gutenberg.org)
+koji sadrži preko 50000 besplatnih knjiga Obavezno je da svi studenti imaju
+različite kolekcije fajlova sa kojima rade. 
+	Romeo and Juliet, Petar Pan, The adventures of Tom Soyer, The secrets of chimneys
+
+3. Ako želite da indeksirate knjigu koja je veća od 500KB odbacite deo teksta
+tako da fajl koji indeksirate nije veći od 500KB. 
+4. Kreirati indeks nad tim fajlovima tako da svaki fajl predstavlja poseban
+dokument u indeksu i sačuvati ga negde na fajl sistemu. Indeks treba da
+sadrži najmanje sledeća polja: sadržaj fajla, naziv fajla, kompletnu putanju do
+fajla na fajl sistemu i veličinu fajla u bajtovima. 
+5. Od prethodne kolekcije fajlova napraviti novu kolekciju od najmanje 400
+fajlova istog sadržaja tako što se svaki od originalna 4 fajla deli na po 100
+približno jednakih delova. Za podelu napisati posebnu aplikaciju u Javi ili
+koristiti neki gotov program koji to radi. Fajlove je moguće podeliti na bilo
+kom mestu tj. ne treba da se vodi računa o deljenju na kraju rečenice ili
+paragrafa. 
+	Iskoriscen gotov program.
+
+6. Kreirati i drugi indeks sa novom kolekcijom fajlova i istim poljima i uporediti
+veličinu oba kreirana indeksa i vreme potrebno za njihovo kreiranje. 
+
+-----------------------------------------------------------------------------------
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\Podaci\Peter Pan.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\Podaci\Romeo and Juliet.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\Podaci\The adventures of Tom Soyer.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\Podaci\The secrets of chimneys.txt
+Indexing 4 files took 2164 milliseconds
+Velicina indeksa: 524KB
+-----------------------------------------------------------------------------------
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_1.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_10.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_100.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_11.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_12.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_13.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_14.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_15.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_16.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_17.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_18.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_19.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_2.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_20.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_21.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_22.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_23.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_24.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_25.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_26.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_27.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_28.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_29.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_3.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_30.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_31.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_32.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_33.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_34.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_35.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_36.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_37.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_38.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_39.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_4.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_40.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_41.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_42.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_43.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_44.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_45.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_46.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_47.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_48.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_49.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_5.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_50.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_51.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_52.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_53.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_54.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_55.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_56.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_57.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_58.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_59.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_6.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_60.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_61.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_62.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_63.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_64.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_65.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_66.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_67.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_68.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_69.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_7.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_70.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_71.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_72.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_73.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_74.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_75.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_76.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_77.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_78.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_79.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_8.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_80.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_81.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_82.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_83.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_84.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_85.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_86.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_87.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_88.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_89.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_9.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_90.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_91.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_92.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_93.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_94.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_95.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_96.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_97.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_98.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Peter Pan_99.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_1.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_10.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_100.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_11.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_12.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_13.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_14.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_15.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_16.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_17.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_18.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_19.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_2.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_20.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_21.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_22.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_23.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_24.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_25.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_26.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_27.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_28.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_29.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_3.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_30.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_31.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_32.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_33.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_34.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_35.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_36.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_37.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_38.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_39.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_4.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_40.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_41.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_42.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_43.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_44.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_45.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_46.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_47.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_48.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_49.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_5.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_50.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_51.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_52.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_53.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_54.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_55.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_56.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_57.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_58.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_59.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_6.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_60.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_61.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_62.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_63.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_64.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_65.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_66.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_67.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_68.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_69.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_7.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_70.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_71.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_72.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_73.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_74.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_75.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_76.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_77.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_78.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_79.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_8.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_80.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_81.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_82.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_83.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_84.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_85.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_86.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_87.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_88.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_89.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_9.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_90.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_91.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_92.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_93.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_94.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_95.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_96.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_97.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_98.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\Romeo and Juliet_99.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_1.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_10.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_100.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_11.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_12.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_13.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_14.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_15.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_16.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_17.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_18.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_19.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_2.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_20.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_21.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_22.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_23.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_24.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_25.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_26.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_27.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_28.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_29.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_3.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_30.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_31.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_32.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_33.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_34.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_35.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_36.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_37.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_38.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_39.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_4.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_40.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_41.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_42.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_43.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_44.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_45.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_46.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_47.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_48.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_49.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_5.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_50.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_51.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_52.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_53.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_54.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_55.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_56.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_57.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_58.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_59.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_6.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_60.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_61.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_62.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_63.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_64.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_65.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_66.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_67.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_68.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_69.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_7.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_70.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_71.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_72.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_73.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_74.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_75.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_76.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_77.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_78.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_79.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_8.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_80.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_81.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_82.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_83.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_84.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_85.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_86.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_87.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_88.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_89.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_9.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_90.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_91.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_92.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_93.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_94.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_95.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_96.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_97.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_98.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The adventures of Tom Soyer_99.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_1.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_10.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_100.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_11.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_12.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_13.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_14.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_15.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_16.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_17.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_18.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_19.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_2.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_20.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_21.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_22.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_23.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_24.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_25.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_26.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_27.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_28.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_29.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_3.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_30.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_31.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_32.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_33.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_34.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_35.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_36.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_37.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_38.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_39.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_4.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_40.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_41.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_42.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_43.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_44.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_45.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_46.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_47.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_48.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_49.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_5.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_50.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_51.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_52.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_53.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_54.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_55.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_56.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_57.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_58.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_59.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_6.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_60.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_61.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_62.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_63.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_64.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_65.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_66.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_67.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_68.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_69.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_7.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_70.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_71.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_72.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_73.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_74.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_75.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_76.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_77.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_78.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_79.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_8.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_80.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_81.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_82.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_83.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_84.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_85.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_86.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_87.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_88.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_89.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_9.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_90.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_91.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_92.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_93.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_94.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_95.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_96.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_97.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_98.txt
+Indexing C:\Users\nstoj\eclipse-workspace\Pretrazivanje_informacija_Lab1\PodaciPodeljeni\The secrets of chimneys_99.txt
+Indexing 400 files took 8754 milliseconds
+Velicina indeksa: 616KB
+-----------------------------------------------------------------------------------
+Efikasnost: Veći broj manjih dokumenata usporava proces indeksiranja zbog I/O operacija.
+
+Skalabilnost: Veličina indeksa ne raste linearno sa brojem dokumenata, ali raste zbog dupliranja metapodataka i kompleksnosti mapa u indeksu.
+	-Zbog overhead-a čuvanih polja (stored fields) i metapodataka za 400 pojedinačnih dokumenata.
+-----------------------------------------------------------------------------------
+
+7. Kreirati bar jedan logički upit od najmanje 3 termina gde će se primeniti sve 3
+logičke operacije (NOT, AND i OR) i izvršiti ga nad jednim i nad drugim
+indeksom. Identični upit kreirati na 2 načina – direktno kreirati objektni
+model bez korišćenja parsera i isti objektni model upita kreirati parsiranjem
+tekstualnog upita. Kreirani upit izvršiti nad jednim i nad drugim indeksom. 
+
+8. Kreirati još jedan upit. Tip upita odredite na osnovu poslednje cifre svog
+broja indeksa: 1 ili 6 – PointRangeQuery, 
+Identični upit kreirati na 2 načina – direktno kreirati objektni model bez
+korišćenja parsera i isti objektni model upita kreirati parsiranjem tekstualnog
+upita. Kreirani upit izvršiti nad jednim i nad drugim indeksom.

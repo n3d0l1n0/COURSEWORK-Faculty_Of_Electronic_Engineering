@@ -1,0 +1,98 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <mpi.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 10
+#define blocklength 2
+
+int main(int argc, char* argv[])
+{
+    int rank, size;
+    MPI_File fh;
+    MPI_Status status;
+
+    int write_buf[N];
+    int read_buf[N];
+
+    MPI_Init(&argc, &argv);
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    printf("Proces %d pokrenut\n", rank);
+    fflush(stdout);
+
+    // I
+
+    for (int i = 0; i < N; i++)
+        write_buf[i] = rank * N + i;
+
+    MPI_File_open(MPI_COMM_WORLD,"ulaz.bin",MPI_MODE_CREATE | MPI_MODE_WRONLY,MPI_INFO_NULL,&fh);
+    MPI_Offset offset = rank * N * sizeof(int);
+    MPI_File_seek(fh, offset, MPI_SEEK_SET); //MPI_SEEK SET - offset se racuna od pocetka fajla
+    MPI_File_write(fh, write_buf, N, MPI_INT, &status);
+    MPI_File_close(&fh);
+    MPI_Barrier(MPI_COMM_WORLD); //ceka da svi procesi zavrse I deo 
+
+    // II
+
+    MPI_File_open(MPI_COMM_WORLD,"ulaz.bin",MPI_MODE_RDONLY,MPI_INFO_NULL,&fh);
+    MPI_File_read_at(fh,offset,read_buf,N,MPI_INT,&status);
+    MPI_File_close(&fh);
+
+    for (int i = 0; i < N; i++)
+    {
+        if (read_buf[i] != rank * N + i) //da li je procitana vrednost ista kao ocekivana
+        {
+            printf("II deo zadatka - Proces %d: Citanje nije izvrseno pravilno\n", rank);
+            break;
+        }
+    }
+
+    MPI_Barrier(MPI_COMM_WORLD);
+
+    // III 
+
+    MPI_File_open(MPI_COMM_WORLD,"izlaz.bin",MPI_MODE_CREATE | MPI_MODE_WRONLY,MPI_INFO_NULL,&fh);
+    MPI_Datatype filetype;
+
+    MPI_Type_vector(N / blocklength,blocklength,blocklength * size, MPI_INT, &filetype);
+    MPI_Type_commit(&filetype);
+
+    MPI_Offset disp = rank * blocklength * sizeof(int); //drugaciji pocetak za svaki proces
+    //imamo nekontinualni pristup podacima pa je optimalno da postavimo view sa disp i da radimo kolektivni I/O
+    MPI_File_set_view(fh,disp,MPI_INT,filetype,"native",MPI_INFO_NULL);
+
+    MPI_File_write_all(fh,read_buf,N,MPI_INT,&status); //svi procesi zajedno pisu
+    MPI_File_close(&fh);
+    MPI_Type_free(&filetype);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+
+    if (rank == 0)
+    {
+        FILE* f = fopen("izlaz.bin", "rb");
+
+        if (f == NULL)
+        {
+            fflush(stdout);
+        }
+        else
+        {
+            int x;
+
+            while (fread(&x, sizeof(int), 1, f))
+            {
+                printf("%d ", x);
+            }
+
+            printf("\n");
+            fclose(f);
+            fflush(stdout);
+        }
+    }
+
+    MPI_Finalize();
+
+    return 0;
+}

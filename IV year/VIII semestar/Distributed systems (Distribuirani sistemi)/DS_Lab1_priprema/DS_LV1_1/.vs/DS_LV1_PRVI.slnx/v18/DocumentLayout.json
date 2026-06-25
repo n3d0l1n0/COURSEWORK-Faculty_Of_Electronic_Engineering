@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|c:\\users\\nstoj\\desktop\\ds_lv1_1\\ds_lv1_prvi_s\\protos\\user.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|solutionrelative:ds_lv1_prvi_s\\protos\\user.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61D23D8-5B47-1DB3-EEE1-3E7B8ACBA35D}|DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj|c:\\users\\nstoj\\desktop\\ds_lv1_1\\ds_lv1_prvi_c\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61D23D8-5B47-1DB3-EEE1-3E7B8ACBA35D}|DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj|solutionrelative:ds_lv1_prvi_c\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|c:\\users\\nstoj\\desktop\\ds_lv1_1\\ds_lv1_prvi_s\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|solutionrelative:ds_lv1_prvi_s\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|c:\\users\\nstoj\\desktop\\ds_lv1_1\\ds_lv1_prvi_s\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD415CC2-EDFB-B308-101C-C02A7A8DAE8A}|DS_LV1_PRVI_S\\DS_LV1_PRVI_S.csproj|solutionrelative:ds_lv1_prvi_s\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61D23D8-5B47-1DB3-EEE1-3E7B8ACBA35D}|DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj|c:\\users\\nstoj\\desktop\\ds_lv1_1\\ds_lv1_prvi_c\\ds_lv1_prvi_c.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D61D23D8-5B47-1DB3-EEE1-3E7B8ACBA35D}|DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj|solutionrelative:ds_lv1_prvi_c\\ds_lv1_prvi_c.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DS_LV1_PRVI_C.csproj",
+              "DocumentMoniker": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj",
+              "RelativeDocumentMoniker": "DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj",
+              "ToolTip": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj",
+              "RelativeToolTip": "DS_LV1_PRVI_C\\DS_LV1_PRVI_C.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-11T19:20:23.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_C\\Program.cs",
+              "RelativeDocumentMoniker": "DS_LV1_PRVI_C\\Program.cs",
+              "ToolTip": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_C\\Program.cs",
+              "RelativeToolTip": "DS_LV1_PRVI_C\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T19:18:31.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Program.cs",
+              "RelativeDocumentMoniker": "DS_LV1_PRVI_S\\Program.cs",
+              "ToolTip": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Program.cs",
+              "RelativeToolTip": "DS_LV1_PRVI_S\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T19:15:41.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserServiceImpl.cs",
+              "DocumentMoniker": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Services\\UserServiceImpl.cs",
+              "RelativeDocumentMoniker": "DS_LV1_PRVI_S\\Services\\UserServiceImpl.cs",
+              "ToolTip": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Services\\UserServiceImpl.cs",
+              "RelativeToolTip": "DS_LV1_PRVI_S\\Services\\UserServiceImpl.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAG8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T19:14:51.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "user.proto",
+              "DocumentMoniker": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Protos\\user.proto",
+              "RelativeDocumentMoniker": "DS_LV1_PRVI_S\\Protos\\user.proto",
+              "ToolTip": "C:\\Users\\nstoj\\Desktop\\DS_LV1_1\\DS_LV1_PRVI_S\\Protos\\user.proto",
+              "RelativeToolTip": "DS_LV1_PRVI_S\\Protos\\user.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2026-06-11T19:13:24.624Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

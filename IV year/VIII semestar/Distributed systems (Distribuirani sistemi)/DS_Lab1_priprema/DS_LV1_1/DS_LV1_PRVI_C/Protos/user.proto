@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+option csharp_namespace = "DS_LV1_PRVI";
+
+package users;
+
+message PhoneNumber
+{
+    string number = 1;
+}
+
+message User
+{
+    int32 id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string address = 4;
+    repeated PhoneNumber phones = 5;
+}
+
+message UserIdRequest
+{
+    int32 id = 1;
+}
+
+message CreateUserResponse
+{
+    string message = 1;
+}
+
+message UpdateUserResponse
+{
+    string message = 1;
+}
+
+message DeleteUserResponse
+{
+    string message = 1;
+}
+
+message UserList
+{
+    repeated User users = 1;
+}
+
+message RangeRequest
+{
+    int32 fromId = 1;
+    int32 toId = 2;
+}
+
+message DeleteIdsRequest
+{
+    repeated int32 ids = 1;
+}
+
+message DeleteMessages
+{
+    repeated string messages = 1;
+}
+
+service UserService
+{
+    rpc CreateUser(User) returns (CreateUserResponse);
+
+    rpc GetUser(UserIdRequest) returns (User);
+
+    rpc UpdateUser(User) returns (UpdateUserResponse);
+
+    rpc DeleteUser(UserIdRequest) returns (DeleteUserResponse);
+
+    rpc GetUsersInRange(RangeRequest) returns (UserList);
+
+    rpc DeleteUsers(DeleteIdsRequest) returns (DeleteMessages);
+}
