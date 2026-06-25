@@ -1,8 +1,0 @@
-com\mycompany\errorcup\MPParser.class
-com\mycompany\errorcup\sym.class
-com\mycompany\errorcup\MPLexer.class
-java_cup\runtime\virtual_parse_stack.class
-java_cup\runtime\lr_parser.class
-java_cup\runtime\Scanner.class
-java_cup\runtime\Symbol.class
-com\mycompany\errorcup\CUP$MPParser$actions.class
