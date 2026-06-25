@@ -1,0 +1,8 @@
+Struktura Dan sadrži cenu akcije i maksimalan broj akcija (i+1) koji mogu biti kupljeni i-tog dana. 
+Vrši se sortiranje strukture po ceni u rastućem redosledu Quick Sort algoritmom kako bismo 
+uvek prvo kupovali jeftinije akcije. Zatim se vrši obilazak sortiranih dana i vrši se kupovina maksimalnog broja
+akcija za svaki i-ti dan u okviru budžeta k. 
+Složenost celog algoritma će u prosečnom slučaju biti O(n logn) jer je složenost kreiranja niza Dan O(n), 
+sortiranje je prosečno O(n logn), kupovina je takođe složenosti O(n), a oslobađanje memorije O(1). 
+Najgori slučaj za ovo rešenje će biti O(n^2). Mala je šansa da dostignemo ovaj najgori slučaj jer su nizovi u oba
+primera jako mali. 

@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\nstoj\source\repos\Levenstein\Levenstein\main.cpp(17,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nstoj\source\repos\Levenstein\Levenstein\main.cpp(18,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nstoj\source\repos\Levenstein\Levenstein\main.cpp(65,27): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\Users\nstoj\source\repos\Levenstein\Levenstein\main.cpp(85,48): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+C:\Users\nstoj\source\repos\Levenstein\Levenstein\main.cpp(85,45): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+  Levenstein.vcxproj -> C:\Users\nstoj\source\repos\Levenstein\x64\Debug\Levenstein.exe

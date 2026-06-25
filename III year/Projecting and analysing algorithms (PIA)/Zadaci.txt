@@ -1,0 +1,212 @@
+1. 
+
+Припремити фајлове са текстом за тражење подстрингови. Фајлови треба да имају 100, 1000, 10 000 и 100 000 речи. Припремити фајлове са смисленим текстом написаним карактерима ASCII табеле (највише 256 различитих знакова) и фајлове који се састоје само из хексадекадних цифара. Извршити претрагу подстрингова дужине 5, 10, 20 и 50 карактера у свим креираним фајловима. Упоредити перформансе алгоритама за све наведене случајеве по времену извршења. Резултате поређења предати уз пројекат у форми извештаја. Сваки студент имплементира два алгоритма:
+
+Студенти са парним бројем индекса врше тражење подстринга у тексту Rabin-Karp алгоритмом, док студенти са непарним бројем индекса треба да користе Knut-Moris-Prat.
+
+Студенти чија је сума цифара броја индекса паран број треба да имплементирају Levenstein алгоритам за тражење речи које су погрешно написане. У креираним фајловима (са ASCII и хексадекадном азбуком) извршити тражење стрингова приближне дужине 5, 10 и 20 карактера и приказати пронађене стрингове који су на удаљености већој од 0 и мањој од 20% дужине стринга који се тражи. 
+
+Студенти чија је сума цифара броја индекса непаран број треба да имплементирају SoundEx алгоритам за тражење речи које су потенцијално погрешно написане. У креираним фајловима са ASCII азбуком извршити тражење стрингова приближне дужине 5, 10 и 20 карактера и приказати пронађене стрингове који имају исти код, али не представљају исте речи. 
+ 
+
+Напомена: Пројекат именовати бројем индекса и програмским језиком имплементације. 
+
+2. 
+
+
+Имплементирати по приложеној табели, где прва колона представља цифру јединицу броја индекса, три алгоритма из одговарајуће врсте за решавање наведеног проблема. 
+
+Проблем задат у наставку решити применом три различита алгоритма за сортирање и упоредити њихове перформансе по времену извршења и утрошку меморије. Написати и предати кратак извештај поређења перформанси алгоритама за различите улазне низове. 
+
+За сортирање користити целобројне случајне вредности из опсега од 0 до 10000.   
+
+Сортирати случајно генерисане низове целих бројева од 100, 1000, 10к, 100к, 1М и 10М елемената.  
+
+За имплементацију Radix сорта користити било који стабилан алгоритам. 
+
+ 
+
+Проблем 1: 
+
+Фабрика чоколаде је представљена целобројним низом од Н елемената, где и-ти елемент представља број чоколада у и-том пакету. Група од М студената је дошла у посету фабрици и по изласку сваки студент треба да добије тачно један пакет. Расподелити пакете студентима тако да разлика између максималног и минималног броја чоколада у пакетима датим студентима буде минимална. Приказати добијену разлику. Узети да је М 30% вредности Н. 
+
+ 
+
+Проблем 2: 
+
+Продавница слаткиша садржи Н различитих типова слаткиша. Различити слаткиши су представљени целобројним низом где и-ти елемент представља цену и-тог слаткиша. Студент је решио да проба све врсте слаткиша које продавница има у понуди, а продавац му је понудио специјалну акцију, за куповину једног слаткиша, студент може да добије највише K различитих слаткиша бесплатно. Наћи најмањи износ новца који студент може да потроши како би пробао свих Н различитих врста слаткиша. Сматрати да је K 20% вредности Н. 
+
+Цифра 
+
+Проблем 
+
+A1 
+
+A2 
+
+A3 
+
+0 
+
+1 
+
+Selection 
+
+Quick 
+
+Counting 
+
+1 
+
+2 
+
+Bubble 
+
+Heap  
+
+Radix 
+
+2 
+
+1 
+
+Insertion 
+
+Merge 
+
+Bucket 
+
+3 
+
+2 
+
+Selection 
+
+Merge 
+
+Counting 
+
+4 
+
+1 
+
+Bubble 
+
+Quick 
+
+Radix 
+
+5 
+
+2 
+
+Insertion 
+
+Heap  
+
+Bucket 
+
+6 
+
+1 
+
+Selection 
+
+Heap  
+
+Counting 
+
+7 
+
+2 
+
+Bubble 
+
+Merge 
+
+Radix 
+
+8 
+
+1 
+
+Insertion 
+
+Quick 
+
+Bucket 
+
+9 
+
+2 
+
+Selection 
+
+Quick 
+
+Counting 
+
+
+3. pdf 
+
+4. 
+
+Studenti sa neparim brojem indeksa implementiraju binomne hipove, a studenti sa parnim brojem indeksa Fibonačijeve hipove kao strukturu za podršku u rešavanju zadatka. Radite zadatak koji odgovara poslednjoj cifri u vašem broju indeksa.  
+
+Svi zadaci se baziraju na skupu slučajno generisanih celih brojeva (int) u opsegu [a, b]. Generišite nove nasumične brojeve i upisujte ih u skup dok ne dostigne veličinu N. Nakon svakih k dodatih brojeva, izbacite najmanji broj iz skupa.   
+
+Nakon generisanja niza uradite sledeće:  
+
+
+
+Zadatak 0: Snimite niz kao Min hip. Transformišite niz u Max hip. 
+
+Zadatak 1: Dat je niz u koji su smešteni elementi binarnog hipa. Ustanovite da li je u nizu Min hip.  
+
+Zadatak 2: Naći k najvećih proizvoda koji se dobijaju od p elemenata iz skupa generisanih brojeva
+(p < 6) . 
+
+Zadatak 3: Sortirajte ulazni niz. Nađite najdužu sekvencu od p elemenata sa minimalnom razlikom između najvećeg i najmanjeg (p < 101). 
+
+Zadatak 4: Odštampajte p-ti najveći element u nizu (p < 256). 
+
+Zadatak 5: Odštampajte p brojeva koji se najčešće javljaju u skupu (p <= 100).  
+
+Zadatak 6: Generišite još 3 skupa na potpuno isti način i onda ih sve spojite u jedan niz uređen u opadajući redosled. 
+
+Zadatak 7: Snimite niz kao Max hip. Transformišite ga u Min hip. 
+
+Zadatak 8: Generišite još jedan skup. Odštampajte p najmanjih zbirova u kojima je jedan sabirak iz jednog, a drugi sabirak iz drugog skupa (p <= 100).  
+
+Zadatak 9: Nakon svakog dodatog broja odštampajte vrednost median elementa. Ako niz ima 2t elemenata, median je onaj koji je veći od t, a manji od t-1 elemenata. Ako niz ima 2t+1 element, median je onaj koji je manji od t i veći od t elemenata.  
+
+   
+
+Testirati ponašanje svojih rešenja za 1000 <= N <= 10.000.000 i 10 <= k <= 100. 
+
+radjen zadatak 6 
+
+5. 
+U prilogu su opisi zadataka koji za osnovu imaju minimalna sprežna stabla.
+
+
+
+Algoritme testirati nad neusmerenim grafovima čiji potezi imaju pozitivne težine, i gde ne postoje ciklusi dužine 0 (nema veza gde je isti čvor na obe strane potega). 
+
+Testirati izvršenje nad sledeća dva slučaja generisanja grafa: 
+
+Slučaj 1: 
+
+Generisati N čvorova 
+Spojiti jedan slučajno odabrani čvor sa svim ostalim čvorovima u grafu  
+Generisati još k potega koji povezuju po 2 slučajno izabrana čvora (dva čvora ne smeju biti povezana sa više od jednog potega) 
+Slučaj 2: 
+
+Generisati N čvorova 
+Spojiti čvorove u daisy chain 
+Generisati još k potega koji povezuju po 2 slučajno izabrana čvora (dva čvora ne smeju biti povezana sa više od jednog potega) 
+Testirati izvršenje algoritma u funkciji k i N, gde je: 
+
+N = 100, 1000, 10k, 100k 
+
+k = 2*N, 5*N, 10*N, 20*N, 33*N, 50*N 
